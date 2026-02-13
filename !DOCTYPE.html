@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Valentine's Day chlm ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0,0,0,0.3);
+    padding: 15px;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section {
+    display: none;
+    padding: 120px 20px;
+    min-height: 100vh;
+}
+
+.active {
+    display: block;
+}
+
+h1 {
+    font-size: 45px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px white; }
+    to { text-shadow: 0 0 30px #ff004f; }
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4b7d;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff4b7d;
+    color: white;
+}
+
+/* Floating Hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 20px;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    from { transform: translateY(0); opacity:1; }
+    to { transform: translateY(-100vh); opacity:0; }
+}
+
+</style>
+
+<script>
+function showSection(id) {
+    var sections = document.querySelectorAll("section");
+    sections.forEach(section => section.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+
+function showSurprise() {
+    document.getElementById("hiddenMessage").style.display = "block";
+}
+
+/* Floating Hearts Generator */
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
+setInterval(createHeart, 500);
+</script>
+
+</head>
+<body>
+
+<!-- Background Music (Replace music.mp3 with your file name) -->
+<audio id="bgm" loop>
+    <source src="Sarnam Maya Bgm.mp3" type="audio/mpeg">
+</audio>
+
+<nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('reasons')">Reasons</a>
+    <a onclick="showSection('memories')">Memories</a>
+    <a onclick="showSection('letter')">Letter</a>
+    <a onclick="showSection('surprise')">Surprise</a>
+</nav>
+
+<section id="home" class="active">
+    <h1>Happy Valentine's Day 💖</h1>
+    <p>This Entire website is made specially for you A.sophiya❤️</p>
+    <button onclick="showSection('reasons')">Start Our Journey 💕</button>
+</section>
+
+<section id="reasons">
+    <h1>Reasons I Love You 🌹</h1>
+    <p>
+        💗 Enaku un character romba pudichu iranthathuaa.<br><br>
+        💗 Nee enaku prefect match ha irapa nu thonichu.<br><br>
+        💗 Una enaku chinna vaisu  la iranthu ha tharium so love 
+             panna nall bond irakum nu thonichu.<br><br>
+        💗 Nee enoda childhood friend ana athu unaku 
+           nabakam irakathu nu enaku thariumso namaku ulla nall 
+           bond irakum nu.<br><br>
+        💗 Ithu la vachu pakum pohu nee tha enaku set ava nu thonichu.
+    </p>
+</section>
+
+<section id="memories">
+    <h1>Our Beautiful Memories 📸</h1>
+    <p>
+        💕 un kitta love sonnathu(21/02/2022)<br><br>
+        💕 Our first conversation after love(10/03/2022)<br><br>
+        💕 Our first travel together(10/03/2022).<br><br>
+        💕 nee en love ha accpet pannathu(11/04/2022).<br><br>
+        💕 Every small moment that became unforgettable.
+    </p>
+</section>
+
+<section id="letter">
+    <h1>A Letter For You 💌</h1>
+    <p>DEAR LOVE 🫂<br><br>
+   En life-la chinna vaisu la iranthu ha nee iraka ana ,
+8std aprm than um mela love vanthathu.
+ipa en life most important person.
+Nee illama oru naal kooda imagine panna mudiyala.
+
+Naan vaazhkai muzhusa unna kooda travel panna aasai padren.
+Sirichaalum, azhuthaallum,
+success-la irundhaalum, struggle-la irundhaalum
+en kaiya pidichu kooda nadakkanum nu thaan en dream.
+
+Nee en first love,
+nee thaan en last love.
+
+
+Nee en life-la oru paper illa,
+nee thaan en whole book.
+
+Un voice kekkumbodhu en heart calm aagudhu,
+un presence mattum podhum
+en worst day-um best day-a maarum.
+
+
+
+Ennoda past-um, present-um, future-um
+naan unna kooda share pannanum.
+End of the day,
+“This life is beautiful because of you.”
+
+Always yours,
+With all my love ❤️</p>
+</section>
+<section id="surprise">
+    <h1> Surprise 🎁</h1>
+
+    <button onclick="showSurprise()">Click For Surprise ❤️</button>
+
+    <div id="hiddenMessage" style="display:none; margin-top:20px; text-align:center;">
+        <p style="font-size:22px;">
+            💍 Will you marry me and travel life long together? 💖<p><p>
+              Happy Valentines Day Chlm 🥰and  Love U  Soo Much Dii Chlm.😘
+        </p>
+
+        <img src="C:\Users\acer\Desktop\love.html\WhatsApp Image 2026-02-08 at 14.21.25.jpeg" alt="my image"
+             style="width:250px; margin-top:15px; border-radius:12px;">
+    </div>
+</section>
+
+
+</body>
+</html>
